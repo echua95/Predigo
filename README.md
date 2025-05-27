@@ -1,5 +1,8 @@
 # Predigo
 
+Remember to change the api key and mysql password in the application.properties file.<br />
+
+
 #Urls
 
 /odds - to view odds stored in Mysql server<br />
