@@ -1,7 +1,10 @@
-package com.example.backend_api.requests;
+package com.example.backend_api.services.scheduling;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+
+import com.example.backend_api.services.FootballApiClient;
+import com.example.backend_api.services.OddsProcessingService;
 
 @Service
 public class OddsSchedulerService {

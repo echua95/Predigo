@@ -1,4 +1,4 @@
-package com.example.backend_api.configs;
+package com.example.backend_api.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

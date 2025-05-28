@@ -1,6 +1,6 @@
-package com.example.backend_api.requests;
+package com.example.backend_api.services;
 
-import com.example.backend_api.entities.Odds;
+import com.example.backend_api.model.Odds;
 import com.example.backend_api.repository.OddsRepository;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;

@@ -1,4 +1,4 @@
-package com.example.backend_api.requests;
+package com.example.backend_api.services;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

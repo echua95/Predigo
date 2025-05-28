@@ -1,4 +1,4 @@
-package com.example.backend_api.entities;
+package com.example.backend_api.model;
 
 import java.math.BigDecimal;
 

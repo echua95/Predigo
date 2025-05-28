@@ -1,11 +1,13 @@
-package com.example.backend_api.controllers;
+package com.example.backend_api.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.example.backend_api.entities.Odds;
+
+import com.example.backend_api.model.Odds;
 import com.example.backend_api.repository.OddsRepository;
-import com.example.backend_api.requests.OddsProcessingService;
-import com.example.backend_api.requests.FootballApiClient;
+import com.example.backend_api.services.FootballApiClient;
+import com.example.backend_api.services.OddsProcessingService;
+
 import java.util.List;
 
 @RestController
