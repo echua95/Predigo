@@ -1,5 +1,7 @@
 package com.example.backend_api.services.scheduling;
 
+import java.util.logging.Logger;
+
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +13,7 @@ public class OddsSchedulerService {
 
     private final FootballApiClient apiService;
     private final OddsProcessingService oddsProcessingService;
+    private static final Logger logger = Logger.getLogger(OddsSchedulerService.class.getName());
 
     public OddsSchedulerService(FootballApiClient apiService, OddsProcessingService oddsProcessingService) {
         this.apiService = apiService;
@@ -22,9 +25,9 @@ public class OddsSchedulerService {
         try {
             String json = apiService.callExternalApi().block();
             int saved = oddsProcessingService.processAndSaveOdds(json);
-            System.out.println("Scheduled: Saved " + saved + " odds records.");
+            logger.info("Scheduled: Saved " + saved + " odds records.");
         } catch (Exception e) {
-            System.err.println("Scheduled fetch-and-save failed: " + e.getMessage());
+            logger.warning("Scheduled fetch-and-save failed: " + e.getMessage());
         }
     }
 }
