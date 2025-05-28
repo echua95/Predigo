@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import com.example.backend_api.entities.Odds;
 import com.example.backend_api.repository.OddsRepository;
 import com.example.backend_api.requests.OddsProcessingService;
-import com.example.backend_api.requests.TestGet;
+import com.example.backend_api.requests.FootballApiClient;
 import java.util.List;
 
 @RestController
@@ -13,10 +13,10 @@ import java.util.List;
 public class OddsController {
 
     private final OddsRepository oddsRepository;
-    private final TestGet apiService;
+    private final FootballApiClient apiService;
     private final OddsProcessingService oddsProcessingService;
 
-    public OddsController(OddsRepository oddsRepository, TestGet apiService, OddsProcessingService oddsProcessingService) {
+    public OddsController(OddsRepository oddsRepository, FootballApiClient apiService, OddsProcessingService oddsProcessingService) {
         this.oddsRepository = oddsRepository;
         this.apiService = apiService;
         this.oddsProcessingService = oddsProcessingService;

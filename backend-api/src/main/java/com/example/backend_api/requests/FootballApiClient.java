@@ -7,12 +7,12 @@ import org.springframework.web.reactive.function.client.WebClientResponseExcepti
 import reactor.core.publisher.Mono;
 
 @Service
-public class TestGet {
+public class FootballApiClient {
 
     private final WebClient webClient;
     private final String oddsLivePath;
 
-    public TestGet(WebClient webClient, @Value("${api.football.odds-live-path}") String oddsLivePath) {
+    public FootballApiClient(WebClient webClient, @Value("${api.football.odds-live-path}") String oddsLivePath) {
         this.webClient = webClient;
         this.oddsLivePath = oddsLivePath;
     }

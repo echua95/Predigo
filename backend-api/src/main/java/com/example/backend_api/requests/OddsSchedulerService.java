@@ -6,10 +6,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class OddsSchedulerService {
 
-    private final TestGet apiService;
+    private final FootballApiClient apiService;
     private final OddsProcessingService oddsProcessingService;
 
-    public OddsSchedulerService(TestGet apiService, OddsProcessingService oddsProcessingService) {
+    public OddsSchedulerService(FootballApiClient apiService, OddsProcessingService oddsProcessingService) {
         this.apiService = apiService;
         this.oddsProcessingService = oddsProcessingService;
     }
